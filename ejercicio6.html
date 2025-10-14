@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de prueba de HTML</title>
+</head>
+<body>
+    <h1>Formulario de prueba</h1>
+    
+    <form method="GET" action="">
+
+        <div>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required autofocus>
+        </div>
+        <br>
+        
+        <div>
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <br>
+       
+        <div>
+            <label for="url">URL:</label>
+            <input type="url" id="url" name="url" placeholder="Escribe la URL de tu página web personal">
+        </div>
+        <br>
+        
+        <div>
+            <label for="ciudad">Ciudad:</label>
+            <select id="ciudad" name="ciudad">
+                <option value="almeria">Almería</option>
+                <option value="cadiz">Cádiz</option>
+                <option value="cordoba">Córdoba</option>
+                <option value="granada">Granada</option>
+                <option value="huelva">Huelva</option>
+                <option value="jaen">Jaén</option>
+                <option value="malaga">Málaga</option>
+                <option value="sevilla" selected>Sevilla</option>
+            </select>
+        </div>
+        <br>
+        
+        <div>
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha" name="fecha">
+        </div>
+        <br>
+      
+        <div>
+            <label for="tiempo">Tiempo:</label>
+            <input type="time" id="tiempo" name="tiempo">
+        </div>
+        <br>
+     
+        <div>
+            <label for="fecha-hora">Fecha y hora:</label>
+            <input type="datetime-local" id="fecha-hora" name="fecha-hora">
+        </div>
+        <br>
+      
+        <div>
+            <label for="mes">Mes:</label>
+            <input type="month" id="mes" name="mes">
+        </div>
+        <br>
+       
+        <div>
+            <label for="semana">Semana:</label>
+            <input type="week" id="semana" name="semana">
+        </div>
+        <br>
+        
+        <div>
+            <label for="numero">Número:</label>
+            <input type="number" id="numero" name="numero" min="-10" max="10">
+        </div>
+        <br>
+       
+        <div>
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono">
+        </div>
+        <br>
+        
+        <div>
+            <label for="busqueda">Término de búsqueda:</label>
+            <input type="search" id="busqueda" name="busqueda">
+        </div>
+        <br>
+       
+        <div>
+            <label for="color">Color favorito:</label>
+            <input type="color" id="color" name="color">
+        </div>
+        <br>
+        
+        <div>
+            <label>Aficiones:</label>
+            <div>
+                <input type="checkbox" id="cine" name="aficiones" value="1" checked>
+                <label for="cine">Cine</label>
+            </div>
+            <div>
+                <input type="checkbox" id="deporte" name="aficiones" value="1">
+                <label for="deporte">Deporte</label>
+            </div>
+        </div>
+        <br>
+       
+        <div>
+            <label>Forma de pago:</label>
+            <div>
+                <input type="radio" id="visa" name="pago" value="V">
+                <label for="visa">Visa</label>
+            </div>
+            <div>
+                <input type="radio" id="amex" name="pago" value="A">
+                <label for="amex">American Express</label>
+            </div>
+            <div>
+                <input type="radio" id="mastercard" name="pago" value="M">
+                <label for="mastercard">Mastercard</label>
+            </div>
+        </div>
+        <br>
+        
+        <div>
+            <button type="submit">Enviar</button>
+            <button type="reset">Borrar datos</button>
+        </div>
+    </form>
+</body>
+</html>
+

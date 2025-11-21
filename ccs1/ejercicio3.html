@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Festival de Colores</title>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0 auto;
+            max-width: 1200px;
+            padding: 0 20px;
+            background-color: #b69f38;
+        }
+
+        header {
+            background-color: #ff6b6b00;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-family: 'Audiowide', cursive;
+            color: rgb(2, 88, 71);
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 15px 0 0 0;
+            display: flex;
+            justify-content: center;
+            background-color: rgb(11, 80, 59);
+        }
+
+        nav li {
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: rgb(168, 137, 137);
+            font-weight: bold;
+            padding: 8px 15px;
+            border-radius: 4px;
+        }
+
+        nav a:hover {
+            background-color: rgba(44, 134, 122, 0.342);
+        }
+
+        #destacado {
+            background-color: #c57923;
+            color: rgb(114, 81, 54);
+            padding: 15px;
+            text-align: center;
+            font-size: 1.2rem;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .centrado {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .caja {
+            background-color: rgba(rgba(255, 0, 0, 0), rgba(0, 128, 0, 0), rgba(0, 0, 255, 0), alpha);
+            border: 2px solid #1a92f5;
+            border-radius: 8px;
+            padding: 15px;
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .caja p:first-child {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        .caja p:nth-of-type(2) {
+            clear: both;
+            padding: 5px;
+        }
+
+        .izquierda {
+            float: left;
+            margin-right: 15px;
+            margin-bottom: 10px;
+            width: 150px;
+            height: auto;
+            border-radius: 4px;
+        }
+
+        .derecha {
+            float: right;
+            margin-left: 15px;
+            margin-bottom: 10px;
+            width: 150px;
+            height: auto;
+            border-radius: 4px;
+        }
+
+        footer {
+            background-color: #1a535c;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        aside {
+            background-color: #c77851;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        aside h3 {
+            margin-top: 0;
+            color: #1a535c;
+        }
+
+       
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Festival de Colores</h1>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Inicio</a></li>
+                <li><a href="/index.html">Actividades</a></li>
+                <li><a href="/index.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <p id="destacado">¡Vive la experiencia única del Festival de Colores en tu ciudad!</p>
+        <div class="centrado">
+            <div class="caja">
+                <p>El festival reúne música, danza y gastronomía.</p>
+                <p>Participa en talleres y actividades para toda la familia.</p>
+                <p>Disfruta de espectáculos al aire libre.</p>
+            </div>
+            <div class="caja">
+                <p><img class="izquierda" src="img/festival1.jpg" alt="Festival imagen izquierda">
+                La imagen flotante a la izquierda muestra la alegría del evento.</p>
+
+                <p><img class="derecha" src="img/festival2.jpg" alt="Festival imagen derecha">
+                La imagen flotante a la derecha muestra la diversidad cultural.</p>
+            </div>
+        </div>
+        
+        <aside>
+            <h3>Otros datos de interés</h3>
+            <p>El festival contará con:</p>
+            <ul>
+                <li>Más de 50 puestos de comida internacional</li>
+                <li>Zona infantil con actividades especiales</li>
+                <li>Talleres de arte y manualidades</li>
+                <li>Conciertos en vivo durante todo el día</li>
+            </ul>
+            <p>¡No te lo pierdas!</p>
+        </aside>
+       
+    </main>
+
+    <footer>
+        <p>Festival de Colores - Noviembre 2025</p>
+        <p>Contacto: cograd_aliesma24@iesmedinaazahara.es</p>
+    </footer>
+</body>
+
+</html>

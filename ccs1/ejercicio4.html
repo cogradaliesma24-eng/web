@@ -85,25 +85,11 @@
             min-height: 600px;
             max-height: 800px;
             position: relative;
-            /* FONDO DE COLOR DE RESPALDO */
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            clip-path: polygon(100% 0, 100% 85%, 50% 95%, 0 85%, 0 0);
-        }
-        
-        /* Imagen de fondo - RUTA CORREGIDA */
-        .mi_header::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            /* AQUÍ ESTÁ TU IMAGEN - RUTA CORRECTA */
-            background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.6) 100%), url('/ccs1/img/fondo_header.jpg');
+            /* FONDO CON BMW S1000RR ÉPICA */
+            background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.7) 100%), url('https://images.pexels.com/photos/163210/motorcycles-race-helmets-pilots-163210.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
             background-size: cover;
             background-position: center;
             clip-path: polygon(100% 0, 100% 85%, 50% 95%, 0 85%, 0 0);
-            z-index: 1;
         }
         
         /* Contenido del header */
@@ -115,21 +101,19 @@
             color: white;
             text-align: center;
             max-width: 800px;
-            position: relative;
-            z-index: 2;
         }
         
         .header_title {
             font-size: 3rem;
             padding: 20px 0;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
         }
         
         .header_paragraph {
             font-size: 1.2rem;
             line-height: 2rem;
             margin-bottom: 25px;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
         }
         
         .cta {
@@ -179,11 +163,8 @@
         <nav class="mi_menu mi_contenedor">
             <div class="logo">
                 <a href="#">
-                    <svg width="80" height="40" viewBox="0 0 80 40" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="80" height="40" fill="none"/>
-                        <path d="M20,10 L30,30 L40,10 L50,30 L60,10" stroke="white" stroke-width="3" fill="none"/>
-                        <circle cx="70" cy="20" r="8" stroke="white" stroke-width="2" fill="none"/>
-                    </svg>
+                    <!-- CAMBIA ESTA LÍNEA POR TU LOGO SVG -->
+                    <img src="img/logo.svg" alt="Logo" />
                 </a>
             </div>
             <nav class="menu_nav">
@@ -194,24 +175,16 @@
             </nav>
             <div class="menu_social">
                 <a href="#">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" stroke="white" stroke-width="2"/>
-                        <path d="M3 16V8C3 5.23858 5.23858 3 8 3H16C18.7614 3 21 5.23858 21 8V16C21 18.7614 18.7614 21 16 21H8C5.23858 21 3 18.7614 3 16Z" stroke="white" stroke-width="2"/>
-                        <path d="M17.5 6.51L17.51 6.49889" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
+                    <!-- CAMBIA ESTA LÍNEA POR TU ICONO INSTAGRAM -->
+                    <img src="img/instagram.svg" alt="Instagram" />
                 </a>
                 <a href="#">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 13.4876 3.36093 14.891 4 16.1272L3 21L7.8728 20C9.10905 20.6391 10.5124 21 12 21Z" stroke="white" stroke-width="2" stroke-linejoin="round"/>
-                        <path d="M8 12H16" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M12 8V16" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
+                    <!-- CAMBIA ESTA LÍNEA POR TU ICONO WHATSAPP -->
+                    <img src="img/whatsapp.svg" alt="WhatsApp" />
                 </a>
                 <a href="#">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M14 12L10.5 14V10L14 12Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12Z" stroke="white" stroke-width="2"/>
-                    </svg>
+                    <!-- CAMBIA ESTA LÍNEA POR TU ICONO YOUTUBE -->
+                    <img src="img/youtube.svg" alt="YouTube" />
                 </a>
             </div>
         </nav>

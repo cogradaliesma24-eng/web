@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actividad Flexbox</title>
     <style>
-        /* Variables y reset */
         :root {
             --padding-container: 50px 0;
         }
@@ -20,7 +19,6 @@
             font-family: Arial, sans-serif;
         }
         
-        /* Contenedor principal */
         .mi_contenedor {
             width: 90%;
             max-width: 1200px;
@@ -29,7 +27,6 @@
             padding: var(--padding-container);
         }
         
-        /* Menú de navegación */
         .mi_menu {
             display: flex;
             flex-flow: row nowrap;
@@ -78,21 +75,18 @@
             filter: brightness(0) invert(1);
         }
         
-        /* Header principal */
         .mi_header {
             width: 100%;
             height: 100vh;
             min-height: 600px;
             max-height: 800px;
             position: relative;
-            /* FONDO CON BMW S1000RR ÉPICA */
             background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.7) 100%), url('https://images.pexels.com/photos/163210/motorcycles-race-helmets-pilots-163210.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
             background-size: cover;
             background-position: center;
             clip-path: polygon(100% 0, 100% 85%, 50% 95%, 0 85%, 0 0);
         }
         
-        /* Contenido del header */
         .header_container {
             height: 75%;
             display: flex;
@@ -134,7 +128,6 @@
             transform: translateY(-2px);
         }
         
-        /* Responsive */
         @media (max-width: 768px) {
             .mi_menu {
                 flex-direction: column;
@@ -163,27 +156,23 @@
         <nav class="mi_menu mi_contenedor">
             <div class="logo">
                 <a href="#">
-                    <!-- CAMBIA ESTA LÍNEA POR TU LOGO SVG -->
                     <img src="img/logo.svg" alt="Logo" />
                 </a>
             </div>
             <nav class="menu_nav">
-                <a href="#">Inicio</a>
-                <a href="#">Contacto</a>
-                <a href="#">Acerca de</a>
-                <a href="#">Blog</a>
+                <a href="/index.html">Inicio</a>
+                <a href="/index.html">Contacto</a>
+                <a href="/index.html">Acerca de</a>
+                <a href="/index.html">Blog</a>
             </nav>
             <div class="menu_social">
                 <a href="#">
-                    <!-- CAMBIA ESTA LÍNEA POR TU ICONO INSTAGRAM -->
                     <img src="img/instagram.svg" alt="Instagram" />
                 </a>
                 <a href="#">
-                    <!-- CAMBIA ESTA LÍNEA POR TU ICONO WHATSAPP -->
                     <img src="img/whatsapp.svg" alt="WhatsApp" />
                 </a>
                 <a href="#">
-                    <!-- CAMBIA ESTA LÍNEA POR TU ICONO YOUTUBE -->
                     <img src="img/youtube.svg" alt="YouTube" />
                 </a>
             </div>

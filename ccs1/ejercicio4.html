@@ -188,3 +188,1096 @@
     </header>
 </body>
 </html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica HTML/CSS - Flexbox y Grid</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar">
+        <!-- Logo o nombre del sitio -->
+        <div class="logo">
+            <i class="fas fa-code"></i>
+            <span>Práctica CSS</span>
+        </div>
+        
+        <!-- Menú de navegación - Ejemplo de Flexbox -->
+        <ul class="nav-links">
+            <li><a href="#home"><i class="fas fa-home"></i> Inicio</a></li>
+            <li><a href="#flexbox"><i class="fas fa-th"></i> Flexbox</a></li>
+            <li><a href="#grid"><i class="fas fa-table-cells"></i> Grid</a></li>
+            <li><a href="#position"><i class="fas fa-layer-group"></i> Posicionamiento</a></li>
+            <li><a href="#responsive"><i class="fas fa-mobile-alt"></i> Responsive</a></li>
+        </ul>
+        
+        <!-- Botón de modo oscuro/claro -->
+        <div class="theme-toggle">
+            <button id="theme-btn">
+                <i class="fas fa-moon"></i> Modo Oscuro
+            </button>
+        </div>
+    </nav>
+
+    <!-- Sección principal -->
+    <main>
+        <!-- Sección de bienvenida -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Práctica de HTML y CSS</h1>
+                <p>Este es un proyecto de práctica con diferentes ejemplos de CSS, incluyendo Flexbox, Grid, posicionamiento y diseño responsive.</p>
+                <p>¡Modifica el código y experimenta con las propiedades CSS!</p>
+                <a href="#flexbox" class="btn">Comenzar práctica</a>
+            </div>
+            <div class="hero-image">
+                <div class="code-icon">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Flexbox -->
+        <section id="flexbox" class="section">
+            <h2><i class="fas fa-th"></i> Flexbox</h2>
+            <p class="section-description">Flexbox es un modelo de layout unidimensional para organizar elementos en filas o columnas.</p>
+            
+            <!-- Contenedor principal de flexbox -->
+            <div class="flex-container">
+                <!-- Elementos flexibles -->
+                <div class="flex-item item1">
+                    <h3>Item 1</h3>
+                    <p>Este elemento tiene <code>flex-grow: 1</code></p>
+                    <div class="inner-flex">
+                        <span>Sub-item A</span>
+                        <span>Sub-item B</span>
+                    </div>
+                </div>
+                <div class="flex-item item2">
+                    <h3>Item 2</h3>
+                    <p>Este elemento tiene <code>flex-grow: 2</code></p>
+                </div>
+                <div class="flex-item item3">
+                    <h3>Item 3</h3>
+                    <p>Este elemento tiene <code>flex-grow: 1</code></p>
+                </div>
+                <div class="flex-item item4">
+                    <h3>Item 4</h3>
+                    <p>Este elemento tiene <code>flex-shrink: 0</code></p>
+                </div>
+                <div class="flex-item item5">
+                    <h3>Item 5</h3>
+                    <p>Este elemento tiene <code>flex-basis: 200px</code></p>
+                </div>
+            </div>
+            
+            <!-- Controles para modificar propiedades Flexbox -->
+            <div class="controls">
+                <h3>Controles Flexbox</h3>
+                <div class="control-group">
+                    <label for="flex-direction">flex-direction:</label>
+                    <select id="flex-direction">
+                        <option value="row">row</option>
+                        <option value="row-reverse">row-reverse</option>
+                        <option value="column">column</option>
+                        <option value="column-reverse">column-reverse</option>
+                    </select>
+                    
+                    <label for="justify-content">justify-content:</label>
+                    <select id="justify-content">
+                        <option value="flex-start">flex-start</option>
+                        <option value="center">center</option>
+                        <option value="flex-end">flex-end</option>
+                        <option value="space-between">space-between</option>
+                        <option value="space-around">space-around</option>
+                        <option value="space-evenly">space-evenly</option>
+                    </select>
+                    
+                    <label for="align-items">align-items:</label>
+                    <select id="align-items">
+                        <option value="stretch">stretch</option>
+                        <option value="flex-start">flex-start</option>
+                        <option value="center">center</option>
+                        <option value="flex-end">flex-end</option>
+                        <option value="baseline">baseline</option>
+                    </select>
+                    
+                    <button id="reset-flex" class="btn-small">Reset Flexbox</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Grid -->
+        <section id="grid" class="section dark-section">
+            <h2><i class="fas fa-table-cells"></i> CSS Grid</h2>
+            <p class="section-description">CSS Grid es un sistema de layout bidimensional para organizar elementos en filas y columnas.</p>
+            
+            <!-- Contenedor grid -->
+            <div class="grid-container">
+                <div class="grid-item grid-header">
+                    <h3>Header</h3>
+                    <p>Ocupa toda la primera fila</p>
+                </div>
+                <div class="grid-item sidebar">
+                    <h3>Sidebar</h3>
+                    <p>Ocupa la primera columna, filas 2-4</p>
+                </div>
+                <div class="grid-item main-content">
+                    <h3>Contenido Principal</h3>
+                    <p>Ocupa la columna 2-4, fila 2</p>
+                    <div class="nested-grid">
+                        <div class="nested-item">Sub-item 1</div>
+                        <div class="nested-item">Sub-item 2</div>
+                        <div class="nested-item">Sub-item 3</div>
+                        <div class="nested-item">Sub-item 4</div>
+                    </div>
+                </div>
+                <div class="grid-item extra">
+                    <h3>Extra</h3>
+                    <p>Ocupa la columna 2-3, fila 3</p>
+                </div>
+                <div class="grid-item related">
+                    <h3>Related</h3>
+                    <p>Ocupa la columna 4, fila 3</p>
+                </div>
+                <div class="grid-item footer">
+                    <h3>Footer</h3>
+                    <p>Ocupa toda la última fila</p>
+                </div>
+            </div>
+            
+            <!-- Controles para modificar propiedades Grid -->
+            <div class="controls">
+                <h3>Controles Grid</h3>
+                <div class="control-group">
+                    <label for="grid-template-columns">grid-template-columns:</label>
+                    <select id="grid-template-columns">
+                        <option value="1fr 1fr 1fr 1fr">1fr 1fr 1fr 1fr</option>
+                        <option value="repeat(4, 1fr)">repeat(4, 1fr)</option>
+                        <option value="200px 1fr 2fr 150px">200px 1fr 2fr 150px</option>
+                        <option value="repeat(auto-fit, minmax(150px, 1fr))">auto-fit</option>
+                    </select>
+                    
+                    <label for="grid-gap">gap:</label>
+                    <select id="grid-gap">
+                        <option value="10px">10px</option>
+                        <option value="20px">20px</option>
+                        <option value="5px">5px</option>
+                        <option value="15px 30px">15px 30px</option>
+                    </select>
+                    
+                    <button id="reset-grid" class="btn-small">Reset Grid</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Posicionamiento -->
+        <section id="position" class="section">
+            <h2><i class="fas fa-layer-group"></i> Posicionamiento CSS</h2>
+            <p class="section-description">Ejemplos de diferentes tipos de posicionamiento: static, relative, absolute, fixed y sticky.</p>
+            
+            <!-- Contenedor para ejemplos de posicionamiento -->
+            <div class="position-container">
+                <div class="position-example">
+                    <div class="position-box static">Static (por defecto)</div>
+                    <p>Posición normal en el flujo del documento</p>
+                </div>
+                
+                <div class="position-example">
+                    <div class="position-box relative">Relative</div>
+                    <p>Posicionado relativo a su posición normal</p>
+                </div>
+                
+                <div class="position-example">
+                    <div class="position-container-relative">
+                        <div class="position-box absolute">Absolute</div>
+                        <p>Posicionado relativo al ancestro posicionado más cercano</p>
+                    </div>
+                </div>
+                
+                <div class="position-example">
+                    <div class="position-box fixed">Fixed</div>
+                    <p>Posicionado relativo al viewport (fijo en pantalla)</p>
+                </div>
+                
+                <div class="position-example">
+                    <div class="position-box sticky">Sticky</div>
+                    <p>Híbrido entre relative y fixed</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Responsive -->
+        <section id="responsive" class="section dark-section">
+            <h2><i class="fas fa-mobile-alt"></i> Diseño Responsive</h2>
+            <p class="section-description">Ejemplos de técnicas para crear diseños que se adaptan a diferentes tamaños de pantalla.</p>
+            
+            <!-- Tarjetas responsive -->
+            <div class="cards-container">
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile First</h3>
+                    <p>Enfoque de diseño que prioriza dispositivos móviles.</p>
+                    <div class="card-footer">
+                        <span class="badge">Responsive</span>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-tablet-alt"></i>
+                    </div>
+                    <h3>Media Queries</h3>
+                    <p>Permiten aplicar estilos según características del dispositivo.</p>
+                    <div class="card-footer">
+                        <span class="badge">CSS</span>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <h3>Breakpoints</h3>
+                    <p>Puntos donde el diseño cambia para adaptarse a diferentes tamaños.</p>
+                    <div class="card-footer">
+                        <span class="badge">Adaptativo</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Ejemplo de diseño responsive con flexbox -->
+            <div class="responsive-layout">
+                <header class="responsive-header">Header Responsive</header>
+                <div class="responsive-main">
+                    <aside class="responsive-sidebar">Sidebar</aside>
+                    <main class="responsive-content">Contenido Principal</main>
+                    <aside class="responsive-sidebar2">Sidebar 2</aside>
+                </div>
+                <footer class="responsive-footer">Footer Responsive</footer>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Práctica HTML/CSS</h3>
+                <p>Proyecto educativo para practicar conceptos de HTML y CSS.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Recursos</h3>
+                <ul>
+                    <li><a href="https://developer.mozilla.org/es/docs/Web/CSS" target="_blank">MDN CSS</a></li>
+                    <li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">Flexbox Guide</a></li>
+                    <li><a href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="_blank">Grid Guide</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Concepts</h3>
+                <ul>
+                    <li>Flexbox</li>
+                    <li>CSS Grid</li>
+                    <li>Posicionamiento</li>
+                    <li>Responsive Design</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Práctica CSS. Para fines educativos.</p>
+            <p class="hint">¡Modifica este código para experimentar y aprender!</p>
+        </div>
+    </footer>
+
+    <!-- Botón para volver arriba -->
+    <a href="#" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+/* ===========================================
+   ESTILOS GENERALES Y RESET
+   =========================================== */
+
+/* Reset básico para eliminar márgenes y paddings por defecto */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Variables CSS para colores y valores reutilizables */
+:root {
+    --primary-color: #4a6fa5;
+    --secondary-color: #166088;
+    --accent-color: #4fc3a1;
+    --light-color: #f8f9fa;
+    --dark-color: #343a40;
+    --gray-color: #6c757d;
+    --light-gray: #e9ecef;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+/* Estilos para el cuerpo de la página */
+body {
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    line-height: 1.6;
+    transition: var(--transition);
+}
+
+/* Modo oscuro - se activará con JavaScript */
+body.dark-mode {
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+/* ===========================================
+   BARRA DE NAVEGACIÓN
+   =========================================== */
+
+.navbar {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 2rem;
+    display: flex; /* Flexbox para alinear elementos */
+    justify-content: space-between; /* Espacio entre elementos */
+    align-items: center; /* Centrado vertical */
+    box-shadow: var(--box-shadow);
+    position: sticky; /* Navbar se pega al hacer scroll */
+    top: 0;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+/* Logo en la barra de navegación */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre icono y texto */
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Lista de enlaces de navegación */
+.nav-links {
+    display: flex; /* Flexbox para menú horizontal */
+    list-style: none;
+    gap: 1.5rem; /* Espacio entre elementos del menú */
+}
+
+/* Estilos para los enlaces de navegación */
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Efecto hover en enlaces de navegación */
+.nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Botón para cambiar tema */
+.theme-toggle button {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: var(--transition);
+}
+
+.theme-toggle button:hover {
+    background-color: #0d4a6e;
+}
+
+/* ===========================================
+   SECCIÓN HERO (BIENVENIDA)
+   =========================================== */
+
+.hero {
+    display: flex; /* Flexbox para dividir en dos columnas */
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    min-height: 80vh;
+}
+
+/* Contenido de la sección hero */
+.hero-content {
+    flex: 1; /* Ocupa espacio disponible */
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Botón estilizado */
+.btn {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: bold;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #3da98a;
+    transform: translateY(-3px); /* Efecto de elevación */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagen/icono en la sección hero */
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.code-icon {
+    font-size: 15rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* ===========================================
+   SECCIONES GENERALES
+   =========================================== */
+
+.section {
+    padding: 4rem 2rem;
+}
+
+.dark-section {
+    background-color: var(--light-gray);
+}
+
+body.dark-mode .dark-section {
+    background-color: #1e1e1e;
+}
+
+.section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.section-description {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    color: var(--gray-color);
+}
+
+/* ===========================================
+   SECCIÓN FLEXBOX
+   =========================================== */
+
+/* Contenedor flex principal */
+.flex-container {
+    display: flex; /* Activa flexbox */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+    gap:  1rem; /* Espacio entre elementos */
+    padding: 2rem;
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin-bottom: 2rem;
+    min-height: 300px;
+}
+
+/* Elementos flexibles individuales */
+.flex-item {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition);
+}
+
+.flex-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Propiedades flex específicas para cada elemento */
+.item1 { flex: 1; } /* flex-grow: 1, flex-shrink: 1, flex-basis: 0 */
+.item2 { flex: 2; } /* flex-grow: 2, flex-shrink: 1, flex-basis: 0 */
+.item3 { flex: 1; }
+.item4 { flex-shrink: 0; flex-grow: 1; }
+.item5 { flex-basis: 200px; flex-grow: 1; }
+
+/* Flexbox interno dentro de un elemento flex */
+.inner-flex {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* ===========================================
+   SECCIÓN CSS GRID
+   =========================================== */
+
+/* Contenedor grid principal */
+.grid-container {
+    display: grid; /* Activa CSS Grid */
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas de igual tamaño */
+    grid-template-rows: auto 1fr auto auto; /* Filas automáticas */
+    gap: 1rem; /* Espacio entre celdas */
+    margin-bottom: 2rem;
+    min-height: 500px;
+}
+
+/* Elementos individuales de grid */
+.grid-item {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+.grid-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Posicionamiento específico de cada elemento en la grid */
+.grid-header {
+    grid-column: 1 / -1; /* Ocupa desde la columna 1 hasta la última */
+    background-color: var(--primary-color);
+}
+
+.sidebar {
+    grid-row: 2 / 4; /* Ocupa filas 2 y 3 */
+    background-color: var(--gray-color);
+}
+
+.main-content {
+    grid-column: 2 / 5; /* Ocupa columnas 2, 3 y 4 */
+    grid-row: 2;
+    background-color: var(--accent-color);
+}
+
+.extra {
+    grid-column: 2 / 4;
+    grid-row: 3;
+    background-color: #6c757d;
+}
+
+.related {
+    grid-column: 4;
+    grid-row: 3;
+    background-color: #495057;
+}
+
+.footer {
+    grid-column: 1 / -1;
+    background-color: var(--dark-color);
+}
+
+/* Grid anidado dentro de un elemento grid */
+.nested-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.nested-item {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 0.5rem;
+    border-radius: calc(var(--border-radius) / 2);
+    text-align: center;
+}
+
+/* ===========================================
+   SECCIÓN DE POSICIONAMIENTO
+   =========================================== */
+
+.position-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.position-example {
+    width: 200px;
+    height: 200px;
+    border: 2px dashed var(--gray-color);
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    position: relative; /* Para que los elementos absolute se posicionen respecto a este */
+}
+
+/* Caja para ejemplos de posicionamiento */
+.position-box {
+    width: 120px;
+    height: 60px;
+    background-color: var(--primary-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--border-radius);
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* Posicionamiento estático (por defecto) */
+.static {
+    position: static;
+}
+
+/* Posicionamiento relativo */
+.relative {
+    position: relative;
+    top: 10px; /* Se mueve 10px desde su posición original */
+    left: 20px; /* Se mueve 20px desde su posición original */
+}
+
+/* Contenedor para posicionamiento absoluto */
+.position-container-relative {
+    position: relative;
+    height: 100px;
+}
+
+/* Posicionamiento absoluto */
+.absolute {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: var(--accent-color);
+}
+
+/* Posicionamiento fijo */
+.fixed {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #dc3545;
+    z-index: 100;
+}
+
+/* Posicionamiento sticky */
+.sticky {
+    position: sticky;
+    top: 80px; /* Se pegará cuando el scroll llegue a 80px desde arriba */
+    background-color: #ffc107;
+    color: var(--dark-color);
+}
+
+/* ===========================================
+   SECCIÓN RESPONSIVE
+   =========================================== */
+
+/* Contenedor de tarjetas */
+.cards-container {
+    display: flex; /* Flexbox para tarjetas en fila */
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan */
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* Tarjetas individuales */
+.card {
+    flex: 1; /* Las tarjetas crecen para ocupar espacio disponible */
+    min-width: 250px; /* Ancho mínimo antes de envolverse */
+    max-width: 350px; /* Ancho máximo */
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+    transition: var(--transition);
+}
+
+body.dark-mode .card {
+    background-color: #2d2d2d;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.card-icon {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.card-footer {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--light-gray);
+}
+
+.badge {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* Layout responsive con flexbox */
+.responsive-layout {
+    border: 2px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.responsive-header,
+.responsive-footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.responsive-main {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en móviles */
+    min-height: 300px;
+}
+
+.responsive-sidebar,
+.responsive-sidebar2 {
+    flex: 1; /* Ocupan 1 parte del espacio disponible */
+    min-width: 200px; /* Ancho mínimo antes de envolverse */
+    background-color: var(--light-gray);
+    padding: 1.5rem;
+}
+
+.responsive-content {
+    flex: 2; /* Ocupa 2 partes del espacio disponible (el doble que las sidebars) */
+    min-width: 300px; /* Ancho mínimo antes de envolverse */
+    background-color: white;
+    padding: 1.5rem;
+}
+
+body.dark-mode .responsive-content {
+    background-color: #2d2d2d;
+}
+
+body.dark-mode .responsive-sidebar,
+body.dark-mode .responsive-sidebar2 {
+    background-color: #1e1e1e;
+}
+
+/* ===========================================
+   CONTROLES INTERACTIVOS
+   =========================================== */
+
+.controls {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    box-shadow: var(--box-shadow);
+    margin-top: 2rem;
+}
+
+body.dark-mode .controls {
+    background-color: #2d2d2d;
+}
+
+.control-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.control-group label {
+    font-weight: bold;
+}
+
+.control-group select {
+    padding: 0.5rem;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--gray-color);
+    background-color: white;
+    color: var(--dark-color);
+}
+
+body.dark-mode .control-group select {
+    background-color: #3d3d3d;
+    color: white;
+    border-color: #555;
+}
+
+.btn-small {
+    background-color: var(--gray-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-small:hover {
+    background-color: #5a6268;
+}
+
+/* ===========================================
+   PIE DE PÁGINA
+   =========================================== */
+
+.footer {
+    background-color: var(--dark-color);
+    color: white;
+    padding: 3rem 2rem 1rem;
+}
+
+.footer-content {
+    display: flex; /* Flexbox para columnas en el footer */
+    flex-wrap: wrap; /* Permite que las columnas se envuelvan en móviles */
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-section h3 {
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+    color: #ccc;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer-section a:hover {
+    color: var(--accent-color);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: #aaa;
+}
+
+.hint {
+    font-style: italic;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+/* ===========================================
+   ELEMENTOS ADICIONALES
+   =========================================== */
+
+/* Botón para volver arriba */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--accent-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1.5rem;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    z-index: 99;
+}
+
+.back-to-top:hover {
+    background-color: #3da98a;
+    transform: translateY(-5px);
+}
+
+/* ===========================================
+   MEDIA QUERIES - DISEÑO RESPONSIVE
+   =========================================== */
+
+/* Tablets y pantallas medianas */
+@media (max-width: 992px) {
+    .hero {
+        flex-direction: column; /* Cambia a columna en pantallas medianas */
+        text-align: center;
+        padding: 2rem;
+    }
+    
+    .hero-content {
+        margin-bottom: 2rem;
+    }
+    
+    .navbar {
+        flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+    }
+    
+    .nav-links {
+        order: 3; /* Cambia el orden para que aparezca después */
+        width: 100%;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+    
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablet */
+    }
+    
+    .sidebar {
+        grid-row: 2;
+    }
+    
+    .main-content {
+        grid-column: 1 / -1;
+        grid-row: 3;
+    }
+    
+    .extra {
+        grid-column: 1;
+        grid-row: 4;
+    }
+    
+    .related {
+        grid-column: 2;
+        grid-row: 4;
+    }
+}
+
+/* Móviles */
+@media (max-width: 768px) {
+    .section {
+        padding: 2rem 1rem;
+    }
+    
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .code-icon {
+        font-size: 10rem;
+    }
+    
+    .grid-container {
+        grid-template-columns: 1fr; /* 1 columna en móviles */
+    }
+    
+    .sidebar {
+        grid-row: auto;
+    }
+    
+    .main-content {
+        grid-row: auto;
+    }
+    
+    .extra, .related {
+        grid-column: 1;
+        grid-row: auto;
+    }
+    
+    .responsive-sidebar,
+    .responsive-sidebar2 {
+        flex: 1 0 100%; /* Ocupan el 100% del ancho en móviles */
+    }
+    
+    .responsive-content {
+        flex: 1 0 100%; /* Ocupa el 100% del ancho en móviles */
+    }
+    
+    .footer-content {
+        flex-direction: column; /* Footer en columna en móviles */
+    }
+}
+
+/* Pequeños móviles */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 1rem;
+    }
+    
+    .nav-links {
+        gap: 0.5rem;
+    }
+    
+    .nav-links a {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.9rem;
+    }
+    
+    .flex-container {
+        padding: 1rem;
+    }
+    
+    .position-example {
+        width: 100%; /* Ancho completo en móviles pequeños */
+    }
+}
